@@ -41,23 +41,23 @@ class atm:
 
             self.btnArrowL1.config(state = NORMAL) 
 
-            self.btnArrowR1 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,
+            self.btnArrowR1 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,command=loan,
             image= self.img_arrow_Right).grid(row=0,column=0,padx=2, pady=2)
-            self.btnArrowR2 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,
+            self.btnArrowR2 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,command=deposit,
             image= self.img_arrow_Right).grid(row=1,column=0,padx=2, pady=2)
-            self.btnArrowR3 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,
+            self.btnArrowR3 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,command=request_new_pin,
             image= self.img_arrow_Right).grid(row=2,column=0,padx=2, pady=2)
-            self.btnArrowR4 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,
+            self.btnArrowR4 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,command=statement,
             image= self.img_arrow_Right).grid(row=3,column=0,padx=2, pady=2)
 
 
-            self.btnArrowL1 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,
+            self.btnArrowL1 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,command=withdrawcash,
             image= self.img_arrow_Left).grid(row=0,column=0,padx=2, pady=2)
-            self.btnArrowL2 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,
+            self.btnArrowL2 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,command=withdrawcash,
             image= self.img_arrow_Left).grid(row=1,column=0,padx=2, pady=2)
-            self.btnArrowL3 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,
+            self.btnArrowL3 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,command=balance,
             image= self.img_arrow_Left).grid(row=2,column=0,padx=2, pady=2)
-            self.btnArrowL4 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,
+            self.btnArrowL4 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,command=statement,
             image= self.img_arrow_Left).grid(row=3,column=0,padx=2, pady=2)
         else:
             self.txtReceipt.delete("1.0", END)
@@ -140,7 +140,25 @@ class atm:
     def loan(): 
         enter_Pin()
         self.txtReceipt.delete("1.0", END)
+        self.txtReceipt.insert(END, 'Loan $')
         self.txtReceipt.focus_set()
+    def deposit(): 
+        enter_Pin()
+        self.txtReceipt.delete("1.0", END)
+        self.txtReceipt.insert(END, 'Loan $')
+        self.txtReceipt.focus_set()
+    def request_new_pin():
+        enter_Pin()
+        self.txtReceipt.delete("1.0", END)
+        self.txtReceipt.insert(END , "New Pin Inserted")
+    def balance():
+        enter_Pin()
+        self.txtReceipt.delete("1.0", END)
+        self.txtReceipt.insert(END, "Balance is 0\n\n")
+    def statement():
+        enter_Pin()
+        self.txtReceipt.delete("1.0", END)
+        self.txtReceipt.insert(END, "Balance is 0\n\n")
 
         # ---------------------------Widget-----------------------------
     self.txtReceipt = Text(TopFrame2Mid, height=17, width=42, bd=12, font=('arial', 9, 'bold'))
@@ -150,23 +168,23 @@ class atm:
 
     self.btnArrowL1 = Button(TopFrame2Left, width=160, height=60, state=DISABLED, command = withdrawcash,
     image= self.img_arrow_Left).grid(row=0,column=0,padx=2, pady=2)
-    self.btnArrowL2 = Button(TopFrame2Left, width=160, height=60, state=DISABLED,
+    self.btnArrowL2 = Button(TopFrame2Left, width=160, height=60, state=DISABLED,command=withdrawcash,
     image= self.img_arrow_Left).grid(row=1,column=0,padx=2, pady=2)
-    self.btnArrowL3 = Button(TopFrame2Left, width=160, height=60, state=DISABLED,
+    self.btnArrowL3 = Button(TopFrame2Left, width=160, height=60, state=DISABLED,command = balance,
     image= self.img_arrow_Left).grid(row=2,column=0,padx=2, pady=2)
-    self.btnArrowL4 = Button(TopFrame2Left, width=160, height=60, state=DISABLED,
+    self.btnArrowL4 = Button(TopFrame2Left, width=160, height=60, state=DISABLED,command=statement,
     image= self.img_arrow_Left).grid(row=3,column=0,padx=2, pady=2)
 
 #####################################################################################################################
     self.img_arrow_Right = ImageTk.PhotoImage(Image.open("rArrow.png"))
     
-    self.btnArrowR1 = Button(TopFrame2Right, width=160, height=60, state=DISABLED, command = loan
+    self.btnArrowR1 = Button(TopFrame2Right, width=160, height=60, state=DISABLED, command = loan,
     image= self.img_arrow_Right).grid(row=0,column=0,padx=2, pady=2)
-    self.btnArrowR2 = Button(TopFrame2Right, width=160, height=60, state=DISABLED,
+    self.btnArrowR2 = Button(TopFrame2Right, width=160, height=60, state=DISABLED,command=deposit,
     image= self.img_arrow_Right).grid(row=1,column=0,padx=2, pady=2)
-    self.btnArrowR3 = Button(TopFrame2Right, width=160, height=60, state=DISABLED,
+    self.btnArrowR3 = Button(TopFrame2Right, width=160, height=60, state=DISABLED,command=request_new_pin,
     image= self.img_arrow_Right).grid(row=2,column=0,padx=2, pady=2)
-    self.btnArrowR4 = Button(TopFrame2Right, width=160, height=60, state=DISABLED,
+    self.btnArrowR4 = Button(TopFrame2Right, width=160, height=60, state=DISABLED,command=statement,
     image= self.img_arrow_Right).grid(row=3,column=0,padx=2, pady=2)
 
     self.img1 = ImageTk.PhotoImage(Image.open("one.png"))
