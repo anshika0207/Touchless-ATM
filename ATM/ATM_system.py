@@ -34,25 +34,25 @@ class atm:
 
         self.img_arrow_Left = ImageTk.PhotoImage(Image.open("lArrow.png"))
 
-        self.btnArrowL1 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,
+        self.btnArrowL1 = Button(TopFrame2Left, width=160, height=60, state=DISABLED,
         image= self.img_arrow_Left).grid(row=0,column=0,padx=2, pady=2)
-        self.btnArrowL2 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,
+        self.btnArrowL2 = Button(TopFrame2Left, width=160, height=60, state=DISABLED,
         image= self.img_arrow_Left).grid(row=1,column=0,padx=2, pady=2)
-        self.btnArrowL3 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,
+        self.btnArrowL3 = Button(TopFrame2Left, width=160, height=60, state=DISABLED,
         image= self.img_arrow_Left).grid(row=2,column=0,padx=2, pady=2)
-        self.btnArrowL4 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,
+        self.btnArrowL4 = Button(TopFrame2Left, width=160, height=60, state=DISABLED,
         image= self.img_arrow_Left).grid(row=3,column=0,padx=2, pady=2)
 
 
         self.img_arrow_Right = ImageTk.PhotoImage(Image.open("rArrow.png"))
         
-        self.btnArrowL1 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,
+        self.btnArrowL1 = Button(TopFrame2Right, width=160, height=60, state=DISABLED,
         image= self.img_arrow_Right).grid(row=0,column=0,padx=2, pady=2)
-        self.btnArrowL2 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,
+        self.btnArrowL2 = Button(TopFrame2Right, width=160, height=60, state=DISABLED,
         image= self.img_arrow_Right).grid(row=1,column=0,padx=2, pady=2)
-        self.btnArrowL3 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,
+        self.btnArrowL3 = Button(TopFrame2Right, width=160, height=60, state=DISABLED,
         image= self.img_arrow_Right).grid(row=2,column=0,padx=2, pady=2)
-        self.btnArrowL4 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,
+        self.btnArrowL4 = Button(TopFrame2Right, width=160, height=60, state=DISABLED,
         image= self.img_arrow_Right).grid(row=3,column=0,padx=2, pady=2)
 
         self.img1 = ImageTk.PhotoImage(Image.open("one.png"))
