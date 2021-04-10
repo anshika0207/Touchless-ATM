@@ -158,6 +158,7 @@ class atm:
         image= self.img_arrow_Right).grid(row=3,column=0,padx=2, pady=2)
 
         self.img1 = ImageTk.PhotoImage(Image.open("one.png"))
+<<<<<<< HEAD
         self.btn1 = Button(TopFrame1, width=160, height=60, command=insert1,
         image= self.img1).grid(row=2,column=0,padx=6, pady=4)
 
@@ -231,7 +232,70 @@ class atm:
         self.txtReceipt.delete("1.0", END)
         self.txtReceipt.focus_set()
         
+=======
+        self.btn1 = Button(TopFrame1, width=160, height=60,
+        image= self.img1).grid(row=2,column=0,padx=6, pady=4)
 
+        self.img2 = ImageTk.PhotoImage(Image.open("two.png"))
+        self.btn2 = Button(TopFrame1, width=160, height=60,
+        image= self.img2).grid(row=2,column=1,padx=6, pady=4)
+>>>>>>> 2d84c933c5258fdc6ca302856fed2d7afca14eb3
+
+        self.img3 = ImageTk.PhotoImage(Image.open("three.png"))
+        self.btn3 = Button(TopFrame1, width=160, height=60,
+        image= self.img3).grid(row=2,column=2,padx=6, pady=4)
+
+        self.imgcancel = ImageTk.PhotoImage(Image.open("cancel.png"))
+        self.btncancel = Button(TopFrame1, width=160, height=60,
+        image= self.imgcancel).grid(row=2,column=3,padx=6, pady=4)
+
+        self.img4 = ImageTk.PhotoImage(Image.open("four.png"))
+        self.btn4 = Button(TopFrame1, width=160, height=60,
+        image= self.img4).grid(row=3,column=0,padx=6, pady=4)    
+
+        self.img5 = ImageTk.PhotoImage(Image.open("five.png"))
+        self.btn2 = Button(TopFrame1, width=160, height=60,
+        image= self.img5).grid(row=3,column=1,padx=6, pady=4)
+
+        self.img6 = ImageTk.PhotoImage(Image.open("six.png"))
+        self.btn3 = Button(TopFrame1, width=160, height=60,
+        image= self.img6).grid(row=3,column=2,padx=6, pady=4)
+
+        self.imgclear = ImageTk.PhotoImage(Image.open("clear.png"))
+        self.btnclear = Button(TopFrame1, width=160, height=60,
+        image= self.imgclear).grid(row=3,column=3,padx=6, pady=4)
+
+        self.img7 = ImageTk.PhotoImage(Image.open("seven.png"))
+        self.btn4 = Button(TopFrame1, width=160, height=60,
+        image= self.img7).grid(row=4,column=0,padx=6, pady=4)    
+
+        self.img8 = ImageTk.PhotoImage(Image.open("eight.png"))
+        self.btn2 = Button(TopFrame1, width=160, height=60,
+        image= self.img8).grid(row=4,column=1,padx=6, pady=4)
+
+        self.img9 = ImageTk.PhotoImage(Image.open("nine.png"))
+        self.btn3 = Button(TopFrame1, width=160, height=60,
+        image= self.img9).grid(row=4,column=2,padx=6, pady=4)
+
+        self.imgenter = ImageTk.PhotoImage(Image.open("enter.png"))
+        self.btnenter = Button(TopFrame1, width=160, height=60,
+        image= self.imgenter).grid(row=4,column=3,padx=6, pady=4) 
+
+        self.imgspace1 = ImageTk.PhotoImage(Image.open("empty.png"))
+        self.btnspace1 = Button(TopFrame1, width=160, height=60,
+        image= self.imgspace1).grid(row=5,column=0,padx=6, pady=4)    
+
+        self.img0 = ImageTk.PhotoImage(Image.open("zero.png"))
+        self.btn0 = Button(TopFrame1, width=160, height=60,
+        image= self.img0).grid(row=5,column=1,padx=6, pady=4)
+
+        self.imgspace2 = ImageTk.PhotoImage(Image.open("empty.png"))
+        self.btnspace2 = Button(TopFrame1, width=160, height=60,
+        image= self.imgspace2).grid(row=5,column=2,padx=6, pady=4)
+
+        self.imgspace3 = ImageTk.PhotoImage(Image.open("empty.png"))
+        self.btnspace3 = Button(TopFrame1, width=160, height=60,
+        image= self.imgspace3).grid(row=5,column=3,padx=6, pady=4)   
 if __name__ == '__main__':
     root = Tk()
     application = atm(root)
