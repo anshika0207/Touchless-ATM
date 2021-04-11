@@ -29,17 +29,14 @@ class atm:
         TopFrame2Right.grid(row=0, column=2, padx=3)
         
         def enter_Pin():
-            pinNo=self.txtReceipt.get("1.0", "end-lc")
+            pinNo=self.txtReceipt.get("1.0", "end-1c")
             if(pinNo == str("1234")):
                 self.txtReceipt.delete("1.0", END)
-
-                self.txtReceipt.insert(END, '\t\t\t ATM' + "\n\n")
-                self.txtReceipt.insert(END, 'Withdraw Cash \t\t\t Loan' + "\n\n")
-                self.txtReceipt.insert(END, 'Cash with Receipt \t\t\t Deposit ' + "\n\n")
-                self.txtReceipt.insert(END, 'Balance \t\t\t Request New Pin' + "\n\n")
-                self.txtReceipt.insert(END, 'Mini Statement \t\t\t Print Statement' + "\n\n")
-
-                self.btnArrowL1.config(state = NORMAL) 
+                self.txtReceipt.insert(END, '\t\t ATM' + "\n\n\n")
+                self.txtReceipt.insert(END, 'Withdraw Cash \t\t\t Loan' + "\n\n\n\n")
+                self.txtReceipt.insert(END, 'Cash with Receipt \t\t\t Deposit ' + "\n\n\n\n")
+                self.txtReceipt.insert(END, 'Balance \t\t\t Request New Pin' + "\n\n\n\n")
+                self.txtReceipt.insert(END, 'Mini Statement \t\t\t Print Statement' + "\n\n\n\n")
 
                 self.btnArrowR1 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,command=loan,
                 image= self.img_arrow_Right).grid(row=0,column=0,padx=2, pady=2)
@@ -134,28 +131,40 @@ class atm:
                 self.root.destroy()
                 return
         def withdrawcash(): 
+            self.txtReceipt.delete("1.0", END)
+            self.txtReceipt.insert(END , "Enter Pin: \n")
             enter_Pin()
+            self.txtReceipt.insert(END , "New Pin Inserted")
             self.txtReceipt.delete("1.0", END)
             self.txtReceipt.focus_set()
         def loan(): 
+            self.txtReceipt.delete("1.0", END)
+            self.txtReceipt.insert(END , "Enter Pin: \n")
             enter_Pin()
             self.txtReceipt.delete("1.0", END)
             self.txtReceipt.insert(END, 'Loan $')
             self.txtReceipt.focus_set()
         def deposit(): 
+            self.txtReceipt.delete("1.0", END)
+            self.txtReceipt.insert(END , "Enter Pin: \n")
             enter_Pin()
             self.txtReceipt.delete("1.0", END)
-            self.txtReceipt.insert(END, 'Loan $')
             self.txtReceipt.focus_set()
         def request_new_pin():
+            self.txtReceipt.delete("1.0", END)
+            self.txtReceipt.insert(END , "Enter Pin: \n")
             enter_Pin()
             self.txtReceipt.delete("1.0", END)
             self.txtReceipt.insert(END , "New Pin Inserted")
         def balance():
+            self.txtReceipt.delete("1.0", END)
+            self.txtReceipt.insert(END , "Enter Pin: \n")
             enter_Pin()
             self.txtReceipt.delete("1.0", END)
             self.txtReceipt.insert(END, "Balance is 0\n\n")
         def statement():
+            self.txtReceipt.delete("1.0", END)
+            self.txtReceipt.insert(END , "Enter Pin: \n")
             enter_Pin()
             self.txtReceipt.delete("1.0", END)
             self.txtReceipt.insert(END, "Balance is 0\n\n")
