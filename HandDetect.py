@@ -1,4 +1,5 @@
 import cv2
+import pyautogui
 import mediapipe as mp
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands
@@ -23,10 +24,17 @@ with mp_hands.Hands(
     
     if results.multi_hand_landmarks:
       for hand_landmarks in results.multi_hand_landmarks:
+        x, y = int(hand_landmarks.landmark[4].x*image.shape[1]) ,int(hand_landmarks.landmark[4].y*image.shape[0])
+        print(x, y)
+        cv2.circle(image, (x, y), 10, (255, 0, 255), cv2.FILLED)
+        movex , movey = hand_landmarks.landmark[4].x*1920 ,hand_landmarks.landmark[4].y*1080
+        pyautogui.moveTo(movex, movey)
+          
         mp_drawing.draw_landmarks(
             image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
-      print(results.multi_hand_landmarks)  
+      # print(results.multi_hand_landmarks)  
     cv2.imshow('MediaPipe Hands', image)
     if cv2.waitKey(5) & 0xFF == 27: # ESC to exit
       break
 cap.release()
+# print(mp_hands.data.Hands.landmarks[0])
