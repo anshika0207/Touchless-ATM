@@ -1,0 +1,88 @@
+.to{
+  background-image: url("hand_trimmed.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+  padding:5% 5%;
+
+}
+.container-fluid{
+  padding:3%;
+}
+.middlee{
+  background-color: #323232;
+}
+
+
+.card-img-top:hover{
+  opacity: 0.5;
+}
+
+.h{
+  font-size: 100px;
+}
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+.mid{
+  text-align: center;
+  color:#fff;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+.carousel-item{
+    padding:7% 25%;
+}
+
+
+@media (max-width:1000px) {
+  body{
+    position: static;
+  }
+
+}
+.mid2{
+  padding: 5% 2%;
+}
+.f{
+  background-color: #888888;
+  position: relative;
+}
+.brd{
+  position: absolute;
+  right: 50px;
+  top: 10px;
+}
+
+
+
+
+
+
+/* this is for the together page */
+
+.row{
+  padding: 7% 15%;
+}
+
+.box{
+  text-align: center;
+}
+h3{
+  font-family: 'Fjalla One', sans-serif;
+}
+.im{
+  height: 100px;
+  padding-bottom: 20px;
+}
