@@ -2,9 +2,12 @@ from tkinter import *
 from tkinter import ttk
 from PIL import ImageTk,Image  
 import tkinter.messagebox
+import HandDetect
+import threading
 
 class atm: 
     def __init__(self, root):
+        balance = 0
         self.root = root
         blank_space = " "
         self.root.title(110* blank_space + " ATM System")
@@ -59,9 +62,34 @@ class atm:
             else:
                 self.txtReceipt.delete("1.0", END)
                 self.txtReceipt.insert(END, 'Invalid Pin Number' + "\n\n")
-
+        enter_Pin()
     ############################################################################################################
+        def enter():
+                self.txtReceipt.delete("1.0", END)
+                self.txtReceipt.insert(END, '\t\t ATM' + "\n\n\n")
+                self.txtReceipt.insert(END, 'Withdraw Cash \t\t\t Loan' + "\n\n\n\n")
+                self.txtReceipt.insert(END, 'Cash with Receipt \t\t\t Deposit ' + "\n\n\n\n")
+                self.txtReceipt.insert(END, 'Balance \t\t\t Request New Pin' + "\n\n\n\n")
+                self.txtReceipt.insert(END, 'Mini Statement \t\t\t Print Statement' + "\n\n\n\n")
 
+                self.btnArrowR1 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,command=loan,
+                image= self.img_arrow_Right).grid(row=0,column=0,padx=2, pady=2)
+                self.btnArrowR2 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,command=deposit,
+                image= self.img_arrow_Right).grid(row=1,column=0,padx=2, pady=2)
+                self.btnArrowR3 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,command=request_new_pin,
+                image= self.img_arrow_Right).grid(row=2,column=0,padx=2, pady=2)
+                self.btnArrowR4 = Button(TopFrame2Right, width=160, height=60, state=NORMAL,command=statement,
+                image= self.img_arrow_Right).grid(row=3,column=0,padx=2, pady=2)
+
+
+                self.btnArrowL1 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,command=withdrawcash,
+                image= self.img_arrow_Left).grid(row=0,column=0,padx=2, pady=2)
+                self.btnArrowL2 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,command=withdrawcash,
+                image= self.img_arrow_Left).grid(row=1,column=0,padx=2, pady=2)
+                self.btnArrowL3 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,command=balance,
+                image= self.img_arrow_Left).grid(row=2,column=0,padx=2, pady=2)
+                self.btnArrowL4 = Button(TopFrame2Left, width=160, height=60, state=NORMAL,command=statement,
+                image= self.img_arrow_Left).grid(row=3,column=0,padx=2, pady=2)
             
         def clear():
             self.txtReceipt.delete("1.0", END)
@@ -131,40 +159,33 @@ class atm:
                 self.root.destroy()
                 return
         def withdrawcash(): 
-            self.txtReceipt.delete("1.0", END)
-            self.txtReceipt.insert(END , "Enter Pin: \n")
             enter_Pin()
-            self.txtReceipt.insert(END , "New Pin Inserted")
+            self.txtReceipt.delete("1.0", END)
+            self.txtReceipt.insert(END , "Withdraw amount: ")
             self.txtReceipt.delete("1.0", END)
             self.txtReceipt.focus_set()
         def loan(): 
-            self.txtReceipt.delete("1.0", END)
-            self.txtReceipt.insert(END , "Enter Pin: \n")
             enter_Pin()
             self.txtReceipt.delete("1.0", END)
             self.txtReceipt.insert(END, 'Loan $')
             self.txtReceipt.focus_set()
         def deposit(): 
-            self.txtReceipt.delete("1.0", END)
-            self.txtReceipt.insert(END , "Enter Pin: \n")
             enter_Pin()
             self.txtReceipt.delete("1.0", END)
+            self.txtReceipt.insert(END , "Enter amount to be deposited: \n")
+            deposit=self.txtReceipt.get("1.0", "end-1c")
+            balance=balance + int(deposit)
             self.txtReceipt.focus_set()
         def request_new_pin():
-            self.txtReceipt.delete("1.0", END)
-            self.txtReceipt.insert(END , "Enter Pin: \n")
             enter_Pin()
             self.txtReceipt.delete("1.0", END)
-            self.txtReceipt.insert(END , "New Pin Inserted")
+            self.txtReceipt.insert(END , "Enter new Pin: ")
         def balance():
-            self.txtReceipt.delete("1.0", END)
-            self.txtReceipt.insert(END , "Enter Pin: \n")
             enter_Pin()
             self.txtReceipt.delete("1.0", END)
-            self.txtReceipt.insert(END, "Balance is 0\n\n")
+            self.txtReceipt.insert(END, "Balance is \n\n")
+            self.txtReceipt.insert(END , str(balance))
         def statement():
-            self.txtReceipt.delete("1.0", END)
-            self.txtReceipt.insert(END , "Enter Pin: \n")
             enter_Pin()
             self.txtReceipt.delete("1.0", END)
             self.txtReceipt.insert(END, "Balance is 0\n\n")
@@ -241,7 +262,7 @@ class atm:
         image= self.img9).grid(row=4,column=2,padx=6, pady=4)
 
         self.imgenter = ImageTk.PhotoImage(Image.open("enter.png"))
-        self.btnenter = Button(TopFrame1, width=160, height=60, command=enter_Pin,
+        self.btnenter = Button(TopFrame1, width=160, height=60, command=enter,
         image= self.imgenter).grid(row=4,column=3,padx=6, pady=4) 
 
         self.imgspace1 = ImageTk.PhotoImage(Image.open("empty.png"))
