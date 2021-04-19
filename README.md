@@ -39,5 +39,4 @@ pip3 install -r requirements.txt  (Install's the dependencies)
  5.  Now you are set and can run the python scripts with
 `````````````````````````````````````````````````
 python3  ATM_system.py
-```
 
