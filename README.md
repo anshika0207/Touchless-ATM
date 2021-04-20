@@ -37,6 +37,15 @@ source env/bin/activate           (Activate the environment)
 pip3 install -r requirements.txt  (Install's the dependencies)
 ```
  5.  Now you are set and can run the python scripts with
-`````````````````````````````````````````````````
+```
 python3  ATM_system.py
+
+
+````
+
+## Challenges we faced!
+* We faced challenges while getting individual co-ordinates of each point on hand from the model. So after extensive searching we found methods of extracting a single landmark, so that instead of working with the 21 detected coordinates, only those useful to us were used.
+* While working with Tkinter, we faced difficulties in giving functionality to our ATM GUI. We slved this issue by referring the documentation of Tkinter.
+* Deciding a reference point was again a challenge as, we had to find a coordinate that remains stable while performing gestures, i.e., during click. Finally we chose three coordinates, along the corners of our palm and generated a point equidistant from these three coordinates. This point was then used as our mouse.
+* The final challenge was integrating both python scripts and then to run them simultaneously. To overcome this, we used threading.
 
