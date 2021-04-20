@@ -13,6 +13,7 @@ def detector():
   cap = cv2.VideoCapture(0)
   with mp_hands.Hands(
       min_detection_confidence=0.5,
+      max_num_hands=1,
       min_tracking_confidence=0.5) as hands:
     while cap.isOpened():
       success, image = cap.read()

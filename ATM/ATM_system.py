@@ -162,7 +162,7 @@ class atm:
             enter_Pin()
             self.txtReceipt.delete("1.0", END)
             self.txtReceipt.insert(END , "Withdraw amount: ")
-            self.txtReceipt.delete("1.0", END)
+            # self.txtReceipt.delete("1.0", END)
             self.txtReceipt.focus_set()
         def loan(): 
             enter_Pin()
