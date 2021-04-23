@@ -43,7 +43,7 @@ python3  ATM_system.py
 
 ````
 ## Presentation Video
-[![Watch the video]](https://www.youtube.com/watch?v=UYBnKTiNJrc)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/UYBnKTiNJrc/0.jpg)](https://www.youtube.com/watch?v=UYBnKTiNJrc)
 ## Challenges we faced!
 * We faced challenges while getting individual co-ordinates of each point on hand from the model. So after extensive searching we found methods of extracting a single landmark, so that instead of working with the 21 detected coordinates, only those useful to us were used.
 * While working with Tkinter, we faced difficulties in giving functionality to our ATM GUI. We slved this issue by referring the documentation of Tkinter.
