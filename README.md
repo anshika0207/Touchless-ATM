@@ -55,6 +55,6 @@ python3  ATM_system.py
 * We further aim to store user’s information in a database.
 
 ## Contributers:
-Pooja Paliwal
-Anshoo Rajput
-Anshika Bhatt
+* Pooja Paliwal
+* Anshoo Rajput
+* Anshika Bhatt
