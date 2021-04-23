@@ -49,3 +49,12 @@ python3  ATM_system.py
 * Deciding a reference point was again a challenge as, we had to find a coordinate that remains stable while performing gestures, i.e., during click. Finally we chose three coordinates, along the corners of our palm and generated a point equidistant from these three coordinates. This point was then used as our mouse.
 * The final challenge was integrating both python scripts and then to run them simultaneously. To overcome this, we used threading.
 
+## So what's next?
+* We plan to expand this project on other public places like restaurants, lifts and public transports.
+* We aim to make the ATM GUI more interactive and user-friendly.
+* We further aim to store user’s information in a database.
+
+## Contributers:
+Pooja Paliwal
+Anshoo Rajput
+Anshika Bhatt
