@@ -1,4 +1,4 @@
-# AMOC-2021
+# Touchless - ATM
 ## Inspiration
 Coronavirus has affected millions of people around the globe and is rising at a very high pace. With Coronavirus being the highlight of recent times, our team realized that the major cause of widespread of this virus is contact in public places.So we developed this project to eradicate the need of contact on essential places, one of them being banks. Access to cash for many in society is remaining essential during the current lockdown around the globe. Studies worldwide on the virus have shown that it can remain alive up to two days on solid surfaces. Since it is not advisable to clean electronic items such as POS machines and ATMs with sanitizers after every use this project aims to ensure that bank transactions are done with minimum possible contact. Also, we further aim to expand our project to workplaces, restaurants and beyond.
 
@@ -42,12 +42,8 @@ python3  ATM_system.py
 
 
 ````
-
 ## Presentation Video
-
-[![Watch the video](https://img.youtube.com/vi/-sqzz7Ohp_Y/maxresdefault.jpg)](https://youtu.be/-sqzz7Ohp_Y)
-
-
+[![Watch the video]](https://www.youtube.com/watch?v=UYBnKTiNJrc)
 ## Challenges we faced!
 * We faced challenges while getting individual co-ordinates of each point on hand from the model. So after extensive searching we found methods of extracting a single landmark, so that instead of working with the 21 detected coordinates, only those useful to us were used.
 * While working with Tkinter, we faced difficulties in giving functionality to our ATM GUI. We slved this issue by referring the documentation of Tkinter.
